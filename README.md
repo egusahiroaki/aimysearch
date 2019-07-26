@@ -1,0 +1,5 @@
+# AiMySearch
+
+## License
+
+MIT
