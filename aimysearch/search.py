@@ -47,5 +47,6 @@ class AiMySearch():
                     l = candidate['index'] - last_elm['index']
                     last_elm['text'] = last_elm['text'][0:l] + \
                         candidate['text']
+                    last_elm['length'] = len(last_elm['text'])
 
         return list(filter(lambda x: search_target_word not in x['text'], filtered))

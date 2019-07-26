@@ -14,6 +14,6 @@ class TestAiMySearch(unittest.TestCase):
         target = "hogehoge"
         text = "hogehogaaaaaaaaaaaaaaaahogehoge"
         actual = search.AiMySearch(target, text).run()
-        expected = [{'text': 'hogehogaaa', 'index': 0, 'length': 8}, {
-            'text': 'aaahogehog', 'index': 20, 'length': 8}]
+        expected = [{'text': 'hogehogaaa', 'index': 0, 'length': 10}, {
+            'text': 'aaahogehog', 'index': 20, 'length': 10}]
         self.assertEqual(expected, actual)
