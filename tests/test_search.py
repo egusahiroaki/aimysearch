@@ -15,7 +15,3 @@ class TestAiMySearch(unittest.TestCase):
         expected = [{'text': 'hogehogaaa', 'index': 0, 'length': 8}, {
             'text': 'aaahogehog', 'index': 20, 'length': 8}]
         self.assertEqual(expected, actual)
-
-
-if __name__ == "__main__":
-    unittest.main()
