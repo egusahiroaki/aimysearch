@@ -1,4 +1,4 @@
-# AiMySearch [![PyPI version](https://badge.fury.io/py/aimysearch.svg)](https://badge.fury.io/py/aimysearch) [![Build Status](https://travis-ci.org/egusahiroaki/aimysearch.svg?branch=master)](https://travis-ci.org/egusahiroaki/aimysearch)
+# AiMySearch [![PyPI version](https://badge.fury.io/py/aimysearch.svg)](https://badge.fury.io/py/aimysearch) [![Build Status](https://travis-ci.org/egusahiroaki/aimysearch.svg?branch=master)](https://travis-ci.org/egusahiroaki/aimysearch) [![Coverage Status](https://coveralls.io/repos/github/egusahiroaki/aimysearch/badge.svg?branch=master)](https://coveralls.io/github/egusahiroaki/aimysearch?branch=master)
 
 AiMySearch is a tool for fuzzy search. This is useful for detecting typos.
 
