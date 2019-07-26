@@ -1,10 +1,11 @@
 language: python
-
+install: pip install pylint
 python:
   - "3.7"
 
 script:
-  - python -m unittest discover tests/
+  - pylint `find . -name '*.py'`
+  - python -m unittest discover tests/  
 
 branches:
   only:
