@@ -1,4 +1,4 @@
-# AiMySearch [![Build Status](https://travis-ci.org/egusahiroaki/aimysearch.svg?branch=master)](https://travis-ci.org/egusahiroaki/aimysearch)
+# AiMySearch [![PyPI version](https://badge.fury.io/py/aimysearch.svg)](https://badge.fury.io/py/aimysearch) [![Build Status](https://travis-ci.org/egusahiroaki/aimysearch.svg?branch=master)](https://travis-ci.org/egusahiroaki/aimysearch)
 
 AiMySearch is a tool for fuzzy search. This is useful for detecting typos.
 
@@ -21,7 +21,7 @@ s.run()
 
 A third argument is used for choosing the length N-character string fragments. The minimum length of fragments is the same as target word.
 
-A forth argument is match rate in texts.g
+A forth argument is match rate in texts.
 
 ```py
 target = "hogehoge"
