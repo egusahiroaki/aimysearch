@@ -1,3 +1,5 @@
+# pylint: disable=C0111
+
 import setuptools
 
 setuptools.setup(
