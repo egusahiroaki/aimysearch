@@ -1,11 +1,15 @@
 language: python
-install: pip install pylint
+install: pip install pylint coverage coveralls
 python:
   - "3.7"
 
 script:
   - pylint `find . -name '*.py'`
-  - python -m unittest discover tests/  
+  # - python -m unittest discover tests/  
+  - coverage run -m unittest discover tests 
+
+after_success:
+  - coveralls
 
 branches:
   only:
