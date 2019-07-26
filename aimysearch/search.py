@@ -22,6 +22,7 @@ class AiMySearch():
 
         candidates = []
         for n_gram_num in list(range(len(search_target_word) - self.fuzziness, len(search_target_word) + self.fuzziness + 1)):
+            print(n_gram_num)
             for target_elm in self.n_gram(target_text, n_gram_num):
                 count = 0
                 if target_elm['text'] == search_target_word:
@@ -34,6 +35,7 @@ class AiMySearch():
 
         filtered = []
         sorted_candidates = sorted(candidates, key=lambda x: x['index'])
+        print(sorted_candidates)
 
         for candidate in sorted_candidates:
             if len(filtered) == 0:
