@@ -31,7 +31,7 @@ class TestAiMySearch(unittest.TestCase):
             "testcase", "msg match_rate is_error")
         test_cases = [
             testCase(msg="with lower", match_rate=0, is_error=True),
-            testCase(msg="with upper", match_rate=0.5, is_error=False),
+            testCase(msg="", match_rate=0.5, is_error=False),
             testCase(msg="with upper", match_rate=1, is_error=True),
         ]
 
