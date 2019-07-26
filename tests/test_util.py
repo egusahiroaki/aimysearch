@@ -1,3 +1,4 @@
+# pylint: disable=C0111
 import unittest
 from aimysearch.util import n_gram
 
