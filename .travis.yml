@@ -5,3 +5,7 @@ python:
 
 script:
   - python -m unittest discover tests/
+
+branches:
+  only:
+  - master
