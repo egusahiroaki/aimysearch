@@ -72,3 +72,21 @@ class TestAiMySearch(unittest.TestCase):
         actual = search.AiMySearch(target, text, 0, 0.8).run()
         expected = []
         self.assertEqual(expected, actual)
+
+    def test_run5(self):
+        """test method for run
+        """
+        target = "hoge"
+        text = "aaaahhooaaaa"
+        actual = search.AiMySearch(target, text, 0, 0.8).run()
+        expected = [{'index': 4, 'length': 4, 'text': 'hhoo'}]
+        self.assertEqual(expected, actual)
+
+    def test_run6(self):
+        """test method for run
+        """
+        target = "hoge"
+        text = "aaaaohohaaaa"
+        actual = search.AiMySearch(target, text, 0, 0.8).run()
+        expected = [{'index': 4, 'length': 4, 'text': 'ohoh'}]
+        self.assertEqual(expected, actual)
