@@ -45,7 +45,7 @@ class TestAiMySearch(unittest.TestCase):
                     self.assertIsInstance(search.AiMySearch(
                         target, text, 0, case.match_rate), search.AiMySearch)
 
-    def test_run_with_(self):
+    def test_run2(self):
         """test method for run with high match rate
         """
         target = "hogehoge"
@@ -53,4 +53,22 @@ class TestAiMySearch(unittest.TestCase):
         actual = search.AiMySearch(target, text, 0, 0.8).run()
         expected = [{'index': 0, 'length': 8, 'text': 'hogehogf'},
                     {'index': 21, 'length': 8, 'text': 'hogehuge'}]
+        self.assertEqual(expected, actual)
+
+    def test_run3(self):
+        """test method for run with no text
+        """
+        target = "hogehoge"
+        text = ""
+        actual = search.AiMySearch(target, text, 0, 0.8).run()
+        expected = []
+        self.assertEqual(expected, actual)
+
+    def test_run4(self):
+        """test method for run with no text and no target
+        """
+        target = ""
+        text = ""
+        actual = search.AiMySearch(target, text, 0, 0.8).run()
+        expected = []
         self.assertEqual(expected, actual)
