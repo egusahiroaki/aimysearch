@@ -37,7 +37,6 @@ class TestAiMySearch(unittest.TestCase):
 
         for case in test_cases:
             with self.subTest(msg=case.msg):
-
                 if case.is_error:
                     with self.assertRaises(search.AiMySearch.MatchRateError):
                         search.AiMySearch(target, text, 0, case.match_rate)
@@ -60,20 +59,10 @@ class TestAiMySearch(unittest.TestCase):
         """
         target = "hogehoge"
         text = ""
-        actual = search.AiMySearch(target, text, 0, 0.8).run()
-        expected = []
-        self.assertEqual(expected, actual)
+        with self.assertRaises(search.AiMySearch.TargetTextError):
+            search.AiMySearch(target, text, 0, 0.8)
 
     def test_run4(self):
-        """test method for run with no text and no target
-        """
-        target = ""
-        text = ""
-        actual = search.AiMySearch(target, text, 0, 0.8).run()
-        expected = []
-        self.assertEqual(expected, actual)
-
-    def test_run5(self):
         """test method for run
         """
         target = "hoge"
@@ -82,7 +71,7 @@ class TestAiMySearch(unittest.TestCase):
         expected = [{'index': 4, 'length': 4, 'text': 'hhoo'}]
         self.assertEqual(expected, actual)
 
-    def test_run6(self):
+    def test_run5(self):
         """test method for run
         """
         target = "hoge"

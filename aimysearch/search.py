@@ -8,8 +8,13 @@ class AiMySearch():
     class MatchRateError(Exception):
         pass
 
+    class TargetTextError(Exception):
+        pass
+
     def __init__(self, search_target_word, target_text, fuzziness=0, match_rate=0.6):
         self.search_target_word = search_target_word
+        if not target_text:
+            raise self.TargetTextError('target_text should not be blank.')
         self.target_text = target_text
         self.fuzziness = fuzziness
         if not 0 < match_rate < 1:
