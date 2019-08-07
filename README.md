@@ -2,11 +2,15 @@
 
 AiMySearch is a tool for fuzzy search. This is useful for detecting typos.
 
+The good point is that you don't have to split your texts.
+
+In case of Japanese sentences, this tool is most effective.
+
 ## Installation
 
 install it yourself as:
 
-    $ pip install aimysearch
+    pip install aimysearch
 
 ## Usage
 
